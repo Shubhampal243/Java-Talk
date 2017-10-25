@@ -1,0 +1,45 @@
+SQL> conn system/rmi@xe
+Connected.
+SQL> desc postq;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ---------------
+
+ QID                                       NOT NULL NUMBER(10)
+ USERID                                             VARCHAR2(20)
+ POST                                               VARCHAR2(500)
+ PDATE                                              VARCHAR2(20)
+ CATEGORY                                           VARCHAR2(20)
+ POSTTITLE                                          VARCHAR2(20)
+
+SQL> desc replyq;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ---------------
+
+ RID                                       NOT NULL NUMBER(10)
+ QID                                                NUMBER(10)
+ NAME                                               VARCHAR2(20)
+ EMAIL                                              VARCHAR2(30)
+ REPLY                                              VARCHAR2(800)
+ RDATE                                              VARCHAR2(20)
+
+SQL> desc reg;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ---------------
+
+ UID1                                      NOT NULL VARCHAR2(20)
+ PWD                                                VARCHAR2(20)
+ NAME                                               VARCHAR2(20)
+ AGE                                                NUMBER(5)
+ QTY                                                NUMBER(10)
+ PHNO                                               NUMBER(10)
+ SQ                                                 VARCHAR2(10)
+ SA                                                 VARCHAR2(10)
+
+SQL>
+two sequence - seq_r,seq_q
+
+create sequence seq_r start with 1 increment by 1 nomaxvalue;
+create sequence seq_q start with 1 increment by 1 nomaxvalue;
+ 
+for online test -> run batch file runtest.bat in that file first line is to minimize cmd then to go to specific dir then to run java and exit
+how to run bat file from browser (onlinetest1.jsp) -> in jsp Runtime.getRuntime().exec("")

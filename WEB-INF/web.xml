@@ -1,0 +1,10 @@
+<web-app>
+<servlet>
+    <servlet-name>bat</servlet-name>
+    <servlet-class>TestBat</servlet-class>
+     </servlet>
+  <servlet-mapping>
+    <servlet-name>bat</servlet-name>
+    <url-pattern>/TestBat</url-pattern>
+  </servlet-mapping>
+</web-app>
